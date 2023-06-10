@@ -1,0 +1,8 @@
+.vscode
+__pycache__
+.env
+Dockerfile
+.dockerignore
+.git*
+Makefile
+.env.sample
