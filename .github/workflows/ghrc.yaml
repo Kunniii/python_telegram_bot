@@ -24,5 +24,5 @@ jobs:
 
       - name: "Build Inventory Image"
         run: |
-          docker build -t ghcr.io/kunniii/python_telegram_bot:latest .
-          docker push ghcr.io/kunniii/python_telegram_bot:latest
+          docker build -t ghcr.io/kunniii/telegram_alert_bot:latest .
+          docker push ghcr.io/kunniii/telegram_alert_bot:latest
