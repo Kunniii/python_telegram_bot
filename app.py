@@ -21,5 +21,9 @@ def home():
 
 @app.route("/send_alert", methods=["POST"])
 def send_alert():
-    request_body = request.json
-    return jsonify(bot.send_message(str(request_body)))
+    request_body: dict = request.json
+    message = request_body.get("message")
+    if message:
+        return jsonify(bot.send_message(message))
+    else:
+        return jsonify({"ok": False, "message": "must have `message`"}), 400
