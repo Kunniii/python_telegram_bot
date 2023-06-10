@@ -3,3 +3,6 @@ up:
 
 dev:
 	@gunicorn --reload wsgi:app
+
+request:
+	python3 ./test/main.py

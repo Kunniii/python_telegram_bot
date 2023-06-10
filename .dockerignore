@@ -6,3 +6,4 @@ Dockerfile
 .git*
 Makefile
 .env.sample
+test*

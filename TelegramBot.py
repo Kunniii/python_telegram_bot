@@ -14,6 +14,10 @@ class TelegramBot:
 
     def send_message(self, message: str):
         url = self._API + "/sendMessage"
-        json_body = {"chat_id": self._GROUP_ID, "text": message}
+        json_body = {
+            "chat_id": self._GROUP_ID,
+            "text": message,
+            "parse_mode": "Markdown",
+        }
         print("Sending message....")
         return post(url, json=json_body).json()
